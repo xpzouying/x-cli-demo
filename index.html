@@ -14,7 +14,8 @@
 <div style="background:#0a0a0a; color:#e5e5e5; font-family:'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace; height:100vh; overflow-y:auto; scroll-snap-type:y mandatory; overscroll-behavior-y:none; scroll-behavior:smooth; -webkit-font-smoothing:antialiased; line-height:1.6;">
 
   <!-- ============ NAV ============ -->
-  <nav style="position:fixed; top:0; left:0; right:0; z-index:50; display:flex; align-items:center; justify-content:space-between; padding:16px 32px; background:rgba(10,10,10,0.78); backdrop-filter:blur(12px); border-bottom:1px solid #1c1c1c;">
+  <nav style="position:fixed; top:0; left:0; right:0; z-index:50; padding:16px 32px; background:rgba(10,10,10,0.78); backdrop-filter:blur(12px); border-bottom:1px solid #1c1c1c;">
+    <div style="width:100%; max-width:1080px; margin:0 auto; display:flex; align-items:center; justify-content:space-between;">
     <a href="#top" style="display:flex; align-items:center; gap:10px; text-decoration:none; color:#e5e5e5;">
       <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border:1px solid #2a2a2a; border-radius:7px; background:#111; color:#4ade80; font-weight:800; font-size:15px;">&gt;_</span>
       <span style="font-weight:700; font-size:16px; letter-spacing:-0.3px;">x-cli</span>
@@ -29,12 +30,13 @@
         Star
       </a>
     </div>
+    </div>
   </nav>
 
   <!-- ============ HERO ============ -->
   <header id="top" style="position:relative; overflow:hidden; min-height:100vh; display:flex; flex-direction:column; justify-content:center; scroll-snap-align:start; scroll-snap-stop:always; padding:92px 32px 56px; border-bottom:1px solid #161616;">
     <div style="position:absolute; inset:0; background-image:linear-gradient(#141414 1px,transparent 1px),linear-gradient(90deg,#141414 1px,transparent 1px); background-size:40px 40px; opacity:0.5; mask-image:radial-gradient(ellipse 80% 60% at 50% 0%, #000 30%, transparent 75%); -webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 0%, #000 30%, transparent 75%); pointer-events:none;"></div>
-    <div style="position:relative; max-width:1080px; margin:0 auto; text-align:center;">
+    <div style="position:relative; width:100%; max-width:1080px; margin:0 auto; text-align:center;">
       <div style="display:inline-flex; align-items:center; gap:8px; padding:6px 14px; border:1px solid #232323; border-radius:999px; background:#111; font-size:12.5px; color:#a3a3a3; margin-bottom:30px;">
         <span style="width:6px; height:6px; border-radius:50%; background:#4ade80; box-shadow:0 0 8px #4ade80;"></span>
         AI agent + kimi-webbridge · 开源 · MIT
@@ -81,7 +83,7 @@
 
   <!-- ============ HOW IT WORKS ============ -->
   <section id="how" style="min-height:100vh; display:flex; flex-direction:column; justify-content:center; scroll-snap-align:start; scroll-snap-stop:always; padding:92px 32px 56px; border-bottom:1px solid #161616;">
-    <div style="max-width:1080px; margin:0 auto;">
+    <div style="width:100%; max-width:1080px; margin:0 auto;">
       <div style="display:flex; align-items:center; justify-content:center; gap:12px; margin-bottom:14px;">
         <span style="color:#4ade80; font-size:13px; font-weight:600;">// 工作原理</span>
       </div>
@@ -117,40 +119,40 @@
 
   <!-- ============ SCENES ============ -->
   <section id="scenes" style="min-height:100vh; display:flex; flex-direction:column; justify-content:center; scroll-snap-align:start; scroll-snap-stop:always; padding:92px 32px 56px; border-bottom:1px solid #161616;">
-    <div style="max-width:1080px; margin:0 auto;">
+    <div style="width:100%; max-width:1080px; margin:0 auto;">
       <div style="display:flex; align-items:center; justify-content:center; gap:12px; margin-bottom:14px;">
         <span style="color:#4ade80; font-size:13px; font-weight:600;">// 现成场景</span>
       </div>
       <h2 style="font-size:clamp(26px,3.5vw,38px); font-weight:800; letter-spacing:-0.8px; margin:0 0 12px; color:#fafafa; text-align:center;">5 个一句话就能跑的场景</h2>
       <p style="max-width:600px; margin:0 auto 28px; text-align:center; color:#8a8a8a; font-size:15px; font-family:'PingFang SC','Microsoft YaHei',system-ui,sans-serif;">装好 kimi-webbridge（只装一次），打开 Claude，发下面那句话就行。</p>
 
-      <div id="scenes-grid" style="display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:14px;"></div>
+      <div id="scenes-grid" style="display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px;"></div>
     </div>
   </section>
 
   <!-- ============ CLI LIST ============ -->
   <section id="clis" style="min-height:100vh; display:flex; flex-direction:column; justify-content:center; scroll-snap-align:start; scroll-snap-stop:always; padding:92px 32px 56px; border-bottom:1px solid #161616;">
-    <div style="max-width:1080px; margin:0 auto;">
+    <div style="width:100%; max-width:1080px; margin:0 auto;">
       <div style="display:flex; align-items:center; justify-content:center; gap:12px; margin-bottom:14px;">
         <span style="color:#4ade80; font-size:13px; font-weight:600;">// 工具箱</span>
       </div>
       <h2 style="font-size:clamp(26px,3.5vw,38px); font-weight:800; letter-spacing:-0.8px; margin:0 0 12px; color:#fafafa; text-align:center;">14 个现成的 CLI</h2>
       <p style="max-width:640px; margin:0 auto 28px; text-align:center; color:#8a8a8a; font-size:15px; font-family:'PingFang SC','Microsoft YaHei',system-ui,sans-serif;">全部由 agent 自动产出，装好即用，也是可参考的案例。</p>
 
-      <div id="clis-grid" style="display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; max-height:218px; overflow-y:auto; padding-right:8px;"></div>
+      <div id="clis-grid" style="display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px;"></div>
     </div>
   </section>
 
   <!-- ============ INSTALL ============ -->
   <section id="install" style="min-height:100vh; display:flex; flex-direction:column; justify-content:center; scroll-snap-align:start; scroll-snap-stop:always; padding:92px 32px 56px; border-bottom:1px solid #161616;">
-    <div style="max-width:1080px; margin:0 auto;">
+    <div style="width:100%; max-width:1080px; margin:0 auto;">
       <div style="display:flex; align-items:center; justify-content:center; gap:12px; margin-bottom:14px;">
         <span style="color:#4ade80; font-size:13px; font-weight:600;">// 安装</span>
       </div>
       <h2 style="font-size:clamp(26px,3.5vw,38px); font-weight:800; letter-spacing:-0.8px; margin:0 0 12px; color:#fafafa; text-align:center;">三步装好，开始用</h2>
       <p style="max-width:640px; margin:0 auto 36px; text-align:center; color:#8a8a8a; font-size:15px; font-family:'PingFang SC','Microsoft YaHei',system-ui,sans-serif;">前置：先装 <span style="color:#c7c7c7;">kimi-webbridge</span> 驱动本地 Chrome，所有场景共用，只装一次。</p>
 
-      <div style="display:grid; grid-template-columns:minmax(0,1.1fr) minmax(0,1fr); gap:18px; align-items:stretch;">
+      <div style="display:grid; grid-template-columns:minmax(0,1.1fr) minmax(0,1fr); gap:18px; align-items:start;">
         <div style="display:flex; flex-direction:column; justify-content:space-between; gap:14px; min-width:0;">
           <div style="border:1px solid #1e1e1e; border-radius:12px; background:#0c0c0c; overflow:hidden;">
             <div style="padding:11px 16px; border-bottom:1px solid #1a1a1a; font-size:12px; color:#7a7a7a; display:flex; align-items:center; gap:8px;"><span style="color:#4ade80;">01</span> 从 Releases 下载，解压即用</div>
@@ -170,7 +172,7 @@
           </div>
         </div>
 
-        <div style="display:flex; flex-direction:column; height:100%; min-width:0; border:1px solid #1e1e1e; border-radius:12px; background:#0c0c0c; padding:24px; font-family:'PingFang SC','Microsoft YaHei',system-ui,sans-serif;">
+        <div style="display:flex; flex-direction:column; min-width:0; border:1px solid #1e1e1e; border-radius:12px; background:#0c0c0c; padding:24px; font-family:'PingFang SC','Microsoft YaHei',system-ui,sans-serif;">
           <div style="font-size:13px; color:#4ade80; font-weight:700; margin-bottom:18px; font-family:'JetBrains Mono',monospace;">自己做一个新场景</div>
           <p style="margin:0 0 16px; color:#9a9a9a; font-size:13.5px; line-height:1.75;">上面场景里的 CLI，都是用 <span style="color:#c7c7c7;">agent-cli-creator</span> skill 让 agent 自动产出的。</p>
           <div style="padding:14px; border-left:2px solid #4ade80; background:#0a0a0a; border-radius:0 8px 8px 0; margin-bottom:16px; font-family:'JetBrains Mono',monospace;">
@@ -178,7 +180,7 @@
             <span style="color:#d4d4d4; font-size:13px;">帮我给 example.com 做个 CLI</span>
           </div>
           <p style="margin:0 0 20px; color:#9a9a9a; font-size:13.5px; line-height:1.75;">装好这个 skill，对你的 agent 说一句就行。</p>
-          <div style="margin-top:auto; padding-top:4px; display:flex; gap:14px; flex-wrap:wrap;">
+          <div style="padding-top:4px; display:flex; gap:14px; flex-wrap:wrap;">
             <a class="link-underline" href="https://github.com/better-world-ai/agent-cli-creator" target="_blank" rel="noreferrer" style="font-size:13px; color:#4ade80; text-decoration:none; font-family:'JetBrains Mono',monospace;">→ agent-cli-creator</a>
             <a class="link-underline" href="https://www.kimi.com/zh-cn/features/webbridge" target="_blank" rel="noreferrer" style="font-size:13px; color:#4ade80; text-decoration:none; font-family:'JetBrains Mono',monospace;">→ kimi-webbridge</a>
           </div>
@@ -190,7 +192,7 @@
   <!-- ============ STAR CTA ============ -->
   <section style="min-height:100vh; display:flex; flex-direction:column; scroll-snap-align:start; scroll-snap-stop:always; padding:92px 32px 0;">
     <div style="flex:1; display:flex; align-items:center; justify-content:center; width:100%;">
-    <div style="position:relative; max-width:860px; margin:0 auto; text-align:center; padding:64px 40px; border:1px solid #1f1f1f; border-radius:20px; background:radial-gradient(ellipse 70% 120% at 50% 0%, rgba(74,222,128,0.07), transparent 60%), #0d0d0d; overflow:hidden;">
+    <div style="position:relative; width:100%; max-width:1080px; margin:0 auto; text-align:center; padding:64px 40px; border:1px solid #1f1f1f; border-radius:20px; background:radial-gradient(ellipse 70% 120% at 50% 0%, rgba(74,222,128,0.07), transparent 60%), #0d0d0d; overflow:hidden;">
       <div style="position:absolute; inset:0; background-image:linear-gradient(#141414 1px,transparent 1px),linear-gradient(90deg,#141414 1px,transparent 1px); background-size:40px 40px; opacity:0.4; mask-image:radial-gradient(ellipse 60% 80% at 50% 50%, #000, transparent 75%); -webkit-mask-image:radial-gradient(ellipse 60% 80% at 50% 50%, #000, transparent 75%);"></div>
       <div style="position:relative;">
         <div style="font-size:28px; color:#4ade80; margin-bottom:18px;">★</div>
@@ -209,7 +211,7 @@
 
   <!-- ============ FOOTER ============ -->
     <footer style="margin-top:auto; padding:24px 32px 4px; border-top:1px solid #161616;">
-    <div style="max-width:1080px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;">
+    <div style="width:100%; max-width:1080px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;">
       <div style="display:flex; align-items:center; gap:10px;">
         <span style="display:inline-flex; align-items:center; justify-content:center; width:26px; height:26px; border:1px solid #2a2a2a; border-radius:6px; background:#111; color:#4ade80; font-weight:800; font-size:13px;">&gt;_</span>
         <span style="font-size:14px; font-weight:600;">x-cli</span>
