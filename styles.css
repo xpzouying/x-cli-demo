@@ -1,0 +1,37 @@
+/* ============================================================
+   x-cli homepage — global styles
+   Ported from the Claude Design .dc.html prototype.
+   The <helmet> base rules + keyframes live here; per-element
+   inline styles stay in index.html for pixel fidelity, and the
+   `style-hover` directives become the .hover-* classes below.
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; }
+::selection { background: #4ade80; color: #0a0a0a; }
+
+@keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+@keyframes scan { 0% { transform: translateY(-100%); } 100% { transform: translateY(100%); } }
+@keyframes floatGrid { 0% { background-position: 0 0; } 100% { background-position: 0 -40px; } }
+
+/* ---- hover states (were `style-hover` in the prototype) ---- */
+.nav-star      { transition: border-color .2s, color .2s; }
+.nav-star:hover      { border-color: #4ade80; color: #4ade80; }
+
+.btn-primary   { transition: background .2s; }
+.btn-primary:hover   { background: #5bea8d; }
+
+.btn-secondary { transition: border-color .2s; }
+.btn-secondary:hover { border-color: #444; }
+
+.scene-card    { transition: border-color .2s, transform .2s; }
+.scene-card:hover    { border-color: #2f5d3f; transform: translateY(-3px); }
+
+.cli-item      { transition: border-color .2s; }
+.cli-item:hover      { border-color: #2a2a2a; }
+
+.link-underline:hover { text-decoration: underline; }
+
+.footer-link   { transition: color .2s; }
+.footer-link:hover   { color: #4ade80; }
